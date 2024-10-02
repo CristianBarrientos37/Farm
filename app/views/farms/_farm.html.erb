@@ -1,0 +1,17 @@
+<div id="<%= dom_id farm %>">
+  <p>
+    <strong>Name:</strong>
+    <%= farm.name %>
+    <strong>Granjeros</strong>
+    <% farm.farmers.each do |farmer|%>
+      <span><%= farmer.name %></span>
+    <% end %>
+
+    <span>
+      <%= link_to "Mostrar granja", farm %> |
+      <%= button_to "Eliminar esta granja", @farm, method: :delete %>
+    </span>
+ 
+  </p>
+
+</div>
